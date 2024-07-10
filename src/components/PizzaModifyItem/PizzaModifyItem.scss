@@ -1,0 +1,46 @@
+.modify-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background-color: #f2f2f2;
+    padding-inline: 10px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: .3s;
+
+    &.active {
+        border: 2px solid var(--orange-color);
+    }
+
+    &>* {
+        display: flex;
+        align-items: center;
+    }
+
+    .right-block {
+        span {
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+        }
+    }
+
+    .left-block {
+        display: flex;
+        gap: 5px;
+    }
+}
+
+.check-modify {
+    border: 1px solid var(--orange-color);
+    padding: 1px;
+    border-radius: 3px;
+    fill: transparent;
+    transition: .3s;
+}
+
+.check-modify.active {
+    fill: var(--orange-color);
+
+}

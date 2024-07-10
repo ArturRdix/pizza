@@ -1,0 +1,33 @@
+.cart {
+    min-width: 360px;
+    position: fixed;
+    right: 16px;
+    bottom: 19px;
+    z-index: 3;
+
+    .cart-btn {
+        width: 100%;
+        padding: 21px 24px;
+        background-color: var(--orange-color);
+        color: #fff;
+        border-radius: 8px;
+        display: flex;
+        border: 0;
+        justify-content: space-between;&:hover{
+            scale: (1.05);
+        }
+
+        span {
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.4px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cart {
+        min-width: calc(100% - 32px);
+        max-width: 100%;
+    }
+}

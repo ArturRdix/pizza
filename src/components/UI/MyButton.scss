@@ -1,0 +1,30 @@
+.my-button {
+    border-color: var(--orange-color);
+    color: var(--orange-color);
+    position: relative;
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: var(--orange-color);
+        color: #fff;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        border-color: #a7a7a7;
+        color: #a7a7a7;
+        background-color: transparent;
+    }
+}

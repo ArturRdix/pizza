@@ -1,0 +1,102 @@
+.cart-wrapper {
+    position: relative;
+
+    &.active {
+        .cart-content {
+            right: 0%;
+            opacity: 1;
+        }
+
+        .cart-bg {
+            opacity: 1;
+            transition: .3s;
+            pointer-events: fill;
+
+        }
+    }
+
+    .cart-content {
+        position: fixed;
+        top: 0;
+        right: -150%;
+        z-index: 13;
+        width: 418px;
+        min-height: 100%;
+        max-height: 100%;
+        background-color: white;
+        transition: .3s;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        opacity: 0;
+
+        .cart-title,
+        .pay-block {
+            padding: 24px 32px;
+        }
+
+        .cart-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #e8eaef;
+
+            h2 {
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+
+            .close {
+                font-size: 2rem;
+                cursor: pointer;
+            }
+        }
+
+        .pay-block {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .pay-info {
+                display: flex;
+                justify-content: space-between;
+
+                &>* {
+                    font-weight: 400;
+                }
+            }
+
+            button {
+                border: 0;
+                border-radius: 6px;
+                color: #fff;
+                background-color: var(--orange-color);
+                font-size: 1.1rem;
+                font-weight: 600;
+                width: 100%;
+                padding: 21px 24px;
+            }
+
+        }
+    }
+
+    .cart-bg {
+        position: fixed;
+        z-index: 12;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.297);
+    }
+}
+
+@media(max-width:415px) {
+    .cart-wrapper {
+        .cart-content {
+            width: 100%;
+        }
+    }
+}
